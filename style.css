@@ -51,23 +51,22 @@ a {
     position: relative; /* Required for positioning the ::after element */
 }
 
-a::after {
-    content: ''; /* Creates an empty pseudo-element */
+a::after{
+    content: '';
     position: absolute;
     left: 0;
     bottom: -8px;
-    height: 3px; /* Thickness of the underline */
-    width: 0;
-    background-color: rgb(181, 181, 181); /* Color of the underline */
-    transition: width 0.2s ease; /* Animation for the underline */
-
-}
-
-a:hover::after {
-    width: 100%; /* Expands the underline */
+    
+    height: 3px;
+    background-color: black;
+    width: 0%;
+    transition: width 0.3s ease;
 }
 
 
+a:hover::after{
+    width:100%;
+}
 
 .logo{
     font-size: 2rem;
