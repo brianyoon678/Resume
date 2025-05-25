@@ -1,0 +1,29 @@
+.type_writer_container{ 
+    display: inline-block;
+}
+
+.type_writer_text.hidden{
+    font-size: 8vw;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    
+}
+/* steps must be the same amount of text including whitespace */
+/* cursor blink */
+.type_writer_text.show{
+    animation: 
+        typing .8s steps(13),
+        cursor .4s step-end infinite alternate;
+    opacity: 1;
+}
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+@keyframes typing{
+    from {width: 0}
+}

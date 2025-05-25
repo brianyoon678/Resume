@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/desktop_nav.css">
     <link rel="stylesheet" href="styles/hamburger_menu.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/profile.css">
     <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/experience.css">
+    
+    <link rel="stylesheet" href="styles/type_writer_animation.css">
+    <link rel="stylesheet" href="styles/scrolling_animation.css">
+
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
@@ -42,29 +49,32 @@
 
     <section id="profile" class = "box">
 
-
+        <!-- 
         <video class="profile-video" src="assets/waterfall3.mp4" autoplay muted loop playsinline></video>
+        -->
+        
 
 
-        <div class="section__pic-container">
+        <div class="section__pic-container blur hidden delay-6 blur-only">
             <img src="./assets/PolaroidProfile.jpeg" alt="PolaroidProfile">
         </div>
         <div class="section__text">
-            <p class="section_dark_text">Hello, I'm</p>
-            <h1 class="title">Brian Hyojun Yoon</h1>
-            <p class="section__text__p2">Full-Stack Developer</p>
-            <div class="btn-container">
+            <p class="section_dark_text blur hidden logo">Hello, I'm</p>
+            <h1 class="title blur hidden logo">Brian Hyojun Yoon</h1>
+            <p class="section__text__p2 blur hidden logo">Full-Stack Developer</p>
+            <div class="btn-container blur hidden logo blur-only">
                 <button class="btn btn-color-2" onClick="window.open('./assets/Full-StackResume.pdf')"> Download CV</button>
                 <button class="btn btn-color-1" onClick="location.href='./#contact'"> Contact Info</button>
             </div>
-            <div id="socials-container">
+            <div id="socials-container" class="blur hidden logo blur-only">
                 <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onClick="location.href='http://www.linkedin.com/in/brianyoon678'">
                 <img src="./assets/github.png" alt="My Github Profile" class="icon" onClick="location.href='https://github.com/brianyoon678'">
             </div>
         </div>
     </section>
 
-    <section id="about">
+    <!-- 
+    <section id="about" class="hidden">
         <p class="section__text__p1">Get to Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
@@ -92,10 +102,14 @@
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
     </section>
-
+-->
     <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
+        <div class="type_writer_container"> 
+            <p class="hidden type_writer_text ">My Experience</p>
+        </div>
+        
+        
+        
         <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-container">
@@ -186,8 +200,8 @@
 
     </section>
 
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
+    <section id="projects" class="hidden">
+        <p class="section__text__p1 text">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
             <div class="about-containers">
@@ -240,7 +254,7 @@
     </section>
 
 
-    <section id="contact">
+    <section id="contact" class="hidden">
         <p class="section__text__p1">Get In Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
