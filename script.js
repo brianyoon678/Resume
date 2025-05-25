@@ -13,3 +13,5 @@ function playVideo(){
   });
 }
 document.addEventListener("DOMContentLoaded", playVideo);
+
+const boxElements = document.querySelectorAll('.box');
