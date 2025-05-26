@@ -7,8 +7,11 @@
     margin:0;
     padding:0;
     
+    
 }
-
+.full_background{
+    background-color: rgb(255, 255, 255);
+}
 body{
     font-family: 'Fira Code', monospace ;
 }

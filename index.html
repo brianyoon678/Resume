@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,17 @@
     <link rel="stylesheet" href="styles/profile.css">
     <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/experience.css">
-    
+
+
     <link rel="stylesheet" href="styles/type_writer_animation.css">
     <link rel="stylesheet" href="styles/scrolling_animation.css">
 
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
-<body>
+
+<body class="full_background">
     <nav id="desktop-nav">
-        <div class="logo">Brian Yoon</div>
+        <div class="logo white">Brian Yoon</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about"> About </a></li>
@@ -33,29 +36,29 @@
     <nav id="hamburger-nav">
         <div class="logo">Brian Yoon</div>
         <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </div>
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-    <section id="profile" class = "box">
+    <section id="profile" class="box">
 
         <!-- 
         <video class="profile-video" src="assets/waterfall3.mp4" autoplay muted loop playsinline></video>
         -->
-        
 
 
-        <div class="section__pic-container blur hidden delay-6 blur-only">
+
+        <div class="section__pic-container delay-6 blur hidden ">
             <img src="./assets/PolaroidProfile.jpeg" alt="PolaroidProfile">
         </div>
         <div class="section__text">
@@ -63,12 +66,15 @@
             <h1 class="title blur hidden logo">Brian Hyojun Yoon</h1>
             <p class="section__text__p2 blur hidden logo">Full-Stack Developer</p>
             <div class="btn-container blur hidden logo blur-only">
-                <button class="btn btn-color-2" onClick="window.open('./assets/Full-StackResume.pdf')"> Download CV</button>
+                <button class="btn btn-color-2" onClick="window.open('./assets/Full-StackResume.pdf')"> Download
+                    CV</button>
                 <button class="btn btn-color-1" onClick="location.href='./#contact'"> Contact Info</button>
             </div>
             <div id="socials-container" class="blur hidden logo blur-only">
-                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onClick="location.href='http://www.linkedin.com/in/brianyoon678'">
-                <img src="./assets/github.png" alt="My Github Profile" class="icon" onClick="location.href='https://github.com/brianyoon678'">
+                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon"
+                    onClick="location.href='http://www.linkedin.com/in/brianyoon678'">
+                <img src="./assets/github.png" alt="My Github Profile" class="icon"
+                    onClick="location.href='https://github.com/brianyoon678'">
             </div>
         </div>
     </section>
@@ -104,99 +110,24 @@
     </section>
 -->
     <section id="experience">
-        <div class="type_writer_container"> 
+        <div class="type_writer_container">
             <p class="hidden type_writer_text ">My Experience</p>
         </div>
-        
-        
-        
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Full-Stack Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>HTML</h3>
-                                <p>4 Years</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>CSS</h3>
-                                <p>4 Years</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Javascript</h3>
-                                <p>4 Years</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Java</h3>
-                                <p>4 Years</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Typescript</h3>
-                                <p>2 Years</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Python</h3>
-                                <p>1 Year</p>
-                            </div>
-                        </article>
-                    </div>
+        <div class="exp_back">
+            <div class="card">
+                <div class="first-content">
+                    <span>Full-Stack Developer </span>
                 </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>PostgreSQL</h3>
-                                <p>2 Years</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Node JS</h3>
-                                <p>3 Years</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Express JS</h3>
-                                <p>3 Years</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class="icon"/>
-                            <div>
-                                <h3>Git</h3>
-                                <p>4 Years</p>
-                            </div>
-                        </article>
-                        
-                    </div>
+                <div class="second-content">
+                    <span>Second</span>
                 </div>
+    
+    
             </div>
-            
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+        
+
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
 
     </section>
 
@@ -205,21 +136,23 @@
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
             <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-1.png" alt="Project 1" class="project-img"/>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Habit Tracker App</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/brianyoon678'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/brianyoon678'">
+                            Live Demo
+                        </button>
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title">Habit Tracker App</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/brianyoon678'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/brianyoon678'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <!-- <div class="details-container color-container">
+                <!-- <div class="details-container color-container">
                 <div class="article-container">
                     <img src="./assets/project-2.png" alt="Project 1" class="project-img"/>
                 </div>
@@ -247,9 +180,9 @@
                     </button>
                 </div>
             </div> -->
+            </div>
         </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
 
     </section>
 
@@ -259,11 +192,11 @@
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon".>
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon" .>
                 <p><a href="mailto:brianyoon678@gmail.com">brianyoon678@gmail.com</a></p>
             </div>
             <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon".>
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" .>
                 <p><a href="https://www.linkedin.com/brianyoon678">LinkedIn</a></p>
             </div>
         </div>
@@ -271,18 +204,19 @@
 
     <footer>
         <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         <p>Copyright &#169; 2024 Brian Yoon. All Rights Reserved.</p>
-      </footer>
+    </footer>
 
     <script src="script.js" defer></script>
 </body>
+
 </html>

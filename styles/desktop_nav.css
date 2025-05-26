@@ -2,6 +2,7 @@
 
 nav, .nav-links {
     display: flex;
+    background-color: black;
 }
 
 nav {
@@ -17,7 +18,7 @@ nav {
 }
 
 a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     position: relative; /* Required for positioning the ::after element */
 }
@@ -28,7 +29,7 @@ a::after{
     left: 0;
     bottom: -8px;
     height: 3px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     width: 0%;
     transition: width 0.3s ease;
 }
@@ -41,6 +42,9 @@ a:hover::after{
 .logo{
     font-size: 2rem;
 
+}
+.logo.white{
+    color: white;
 }
 
 .logo:hover{
