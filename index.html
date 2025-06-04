@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="styles/profile.css">
     <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/experience.css">
-
-
+    <link rel="stylesheet" href="styles/alternating_title.css">
+    <link rel="stylesheet" href="styles/gradient_card.css">
     <link rel="stylesheet" href="styles/type_writer_animation.css">
     <link rel="stylesheet" href="styles/scrolling_animation.css">
+    <link rel="stylesheet" href="styles/3d_hover_card.css.css">
 
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
@@ -50,7 +51,7 @@
         </div>
     </nav>
 
-    <section id="profile" class="box">
+    <section id="profile">
 
         <!-- 
         <video class="profile-video" src="assets/waterfall3.mp4" autoplay muted loop playsinline></video>
@@ -62,9 +63,23 @@
             <img src="./assets/PolaroidProfile.jpeg" alt="PolaroidProfile">
         </div>
         <div class="section__text">
-            <p class="section_dark_text blur hidden logo">Hello, I'm</p>
+            <p class="section_dark_text blur hidden logo">Hello, I'm a</p>
             <h1 class="title blur hidden logo">Brian Hyojun Yoon</h1>
-            <p class="section__text__p2 blur hidden logo">Full-Stack Developer</p>
+
+            <div class="alt_card blur hidden logo">
+                <div class="loader">
+                  
+                  <div class="words">
+                    <span class="word">FullStack</span>
+                    <span class="word">Frontend</span>
+                    <span class="word">Backend</span>
+                    <span class="word">FullStack</span>
+                    <span class="word">UI/UX</span>
+                  </div>
+                  <p>Software Engineer</p>
+                </div>
+              </div>
+            <!-- 
             <div class="btn-container blur hidden logo blur-only">
                 <button class="btn btn-color-2" onClick="window.open('./assets/Full-StackResume.pdf')"> Download
                     CV</button>
@@ -76,6 +91,8 @@
                 <img src="./assets/github.png" alt="My Github Profile" class="icon"
                     onClick="location.href='https://github.com/brianyoon678'">
             </div>
+        -->
+
         </div>
     </section>
 
@@ -113,24 +130,59 @@
         <div class="type_writer_container">
             <p class="hidden type_writer_text ">My Experience</p>
         </div>
-        <div class="exp_back">
-            <div class="card">
-                <div class="first-content">
-                    <span>Full-Stack Developer </span>
+        <div class="gradient_container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+              <p id="prompt">Radiosity Labs <br> <br><br> Full-Stack Developer</p>
+                <div class="title">Enhanced a social media app by allowing users to rate historical stories and create exclusive viewing permissions, ensuring seamless compatibility for both the App and Play Store
+                    Designed and implemented an age-based rating system that categorizes stories by user preferences and age, enabling personalized content visibility and fostering a safer, increasing traffic by 35%. <br>
+                    Implemented video and photo-sharing functionality within the social media app, enabling users to upload and share multimedia content within private or public circles, utilizing AWS S3 for secure storage and fast retrieval and React Native for a smooth media interface. <br>
+                    Accelerated load times by 35% using memoization/lazy loading practices and optimizing state management for minimizing API calls, data latency, and re-renders. <br>
+                    Revamped the GraphQL query to only retrieve critical data by restructuring data requirements tailored towards user interaction, achieving up to 50% reduction in payload size.<br>
+                    </div>
+                <div class="subtitle">
+                  mouse hover tracker
                 </div>
-                <div class="second-content">
-                    <span>Second</span>
-                </div>
-    
-    
+                
+              </div>
             </div>
         </div>
-        
 
+        <div class="a3d_hover_card_container">
+            <figcaption class="a3d_title"> testing</figcaption>>
+        </div>
+
+        </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
 
     </section>
 
+    <!-- 
     <section id="projects" class="hidden">
         <p class="section__text__p1 text">Browse My Recent</p>
         <h1 class="title">Projects</h1>
@@ -179,7 +231,7 @@
                         Live Demo
                     </button>
                 </div>
-            </div> -->
+            </div> 
             </div>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
@@ -201,7 +253,7 @@
             </div>
         </div>
     </section>
-
+-->
     <footer>
         <nav>
             <div class="nav-links-container">

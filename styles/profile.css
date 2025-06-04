@@ -37,6 +37,8 @@
 }
 .section_dark_text{
     color: black;
+    font-family: monospace;
+    margin-bottom: 10px;
 }
 .section__text__p1 {
     text-align: center;
@@ -49,6 +51,7 @@
 .title{
     font-size: 3rem;
     text-align: center;
+    
 }
 
 #socials-container{
