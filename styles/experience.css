@@ -1,13 +1,113 @@
+/* Media query for medium screens (tablets/small laptops) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .toldaly_exp {
+      height: calc(60vh - 75px); /* Reduce height on medium screens */
+      max-height: 50vh;
+      min-height: 350px;
+  }
+  
+  .exp_text h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      padding-bottom: 15px;
+  }
+  
+  .exp_text {
+      padding: 15px;
+  }
+}
 
-.exp_back{
+/* Media query for very small screens */
+@media (max-width: 768px) {
+  .toldaly_exp {
+      flex-direction: column;
+      height: auto;
+      max-height: none;
+      max-width: 95%;
+      min-height: 300px;
+  }
+  
+  .exp_img_wrapper {
+      width: 100%;
+      height: 250px;
+      min-width: unset;
+  }
+  
+  .exp_text {
+      min-width: unset;
+      padding: 15px;
+  }
+  
+  .exp_back {
+      margin-top: 50px; /* Reduce margin on mobile */
+  }
+  
+  .type_writer_text.hidden,
+  .type_writer_text.show {
+      font-size: 2.5em; /* Smaller text on mobile */
+      letter-spacing: 8px;
+  }
+}.toldaly_exp {
+  display: flex;
+  align-items: stretch;
+  height: calc(65vh - 100px); /* More conservative height calculation */
+  max-height: 55vh; /* Stricter max-height to prevent overflow */
+  max-width: 80%;
+  margin: 0 auto;
+  min-height: 400px;
+  flex-wrap: nowrap;
+}
+
+.exp_img_wrapper {
+  position: relative;
+  width: 350px;
+  min-width: 250px; /* Minimum width to prevent image from getting too small */
+  flex-shrink: 0; /* Prevents the image container from shrinking */
+  overflow: hidden;
+}
+
+.exp_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.exp_img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.exp_text {
+  flex: 1;
+  min-width: 300px; /* Minimum width for text readability */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exp_text h2 {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Responsive font size */
+  padding-bottom: 20px;
+}
+
+/* Additional CSS for your existing typewriter container */
+.exp_back {
   margin-top: 75px;
   display: flex;
   justify-content: center;
   height: 25vh;
-  
+  position: relative;
+  z-index: 10; /* Ensures typewriter stays above other content */
 }
 
-/* typewritier */
+/* Typewriter styles */
 .type_writer_container{ 
   display: inline-block;
   margin-bottom: 20px;
@@ -23,23 +123,19 @@
   overflow: hidden;
   opacity: 0;
   color: black;
-  
 }
-/* steps must be the same amount of text including whitespace */
-/* cursor blink */
+
 .type_writer_text.show{
   animation: 
       typing .8s steps(13),
       cursor .4s step-end infinite alternate;
   opacity: 1;
 }
+
 @keyframes cursor {
   50% {border-color: transparent}
 }
+
 @keyframes typing{
   from {width: 0}
 }
-
-
-
-

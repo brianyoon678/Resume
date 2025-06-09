@@ -1,19 +1,69 @@
-/* Replace your current CSS with this: */
-.toldaly_exp {
+/* Media query for medium screens (tablets/small laptops) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .toldaly_exp {
+        height: calc(60vh - 75px); /* Reduce height on medium screens */
+        max-height: 50vh;
+        min-height: 350px;
+    }
+    
+    .exp_text h2 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        padding-bottom: 15px;
+    }
+    
+    .exp_text {
+        padding: 15px;
+    }
+}
+
+/* Media query for very small screens */
+@media (max-width: 768px) {
+    .toldaly_exp {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+        max-width: 95%;
+        min-height: 300px;
+    }
+    
+    .exp_img_wrapper {
+        width: 100%;
+        height: 250px;
+        min-width: unset;
+    }
+    
+    .exp_text {
+        min-width: unset;
+        padding: 15px;
+    }
+    
+    .exp_back {
+        margin-top: 50px; /* Reduce margin on mobile */
+    }
+    
+    .type_writer_text.hidden,
+    .type_writer_text.show {
+        font-size: 2.5em; /* Smaller text on mobile */
+        letter-spacing: 8px;
+    }
+}.toldaly_exp {
     display: flex;
     align-items: stretch;
-    height: 80%;
-    /* Or whatever height you want */
-    /* No gap property = elements stick together */
-    max-width: 80%; /* Limits entire container to 60% of screen */
+    height: auto; /* Let content determine height */
+    max-height: 60vh; /* Limit maximum height */
+    max-width: 80%;
     margin: 0 auto;
+    margin-top: 20px; /* Add some space from typewriter */
+    min-height: 400px;
+    flex-wrap: nowrap;
+    overflow: hidden; /* Prevent content from spilling out */
 }
 
 .exp_img_wrapper {
     position: relative;
     width: 350px;
-    /* Fixed width - adjust as needed */
-    /* OR use: flex: 0 0 40%; for percentage */
+    min-width: 200px; /* Reduced minimum to allow more space for text */
+    flex-shrink: 1; /* Allow some shrinking if needed */
     overflow: hidden;
 }
 
@@ -24,10 +74,8 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Shows full image */
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    
 }
 
 .exp_img.active {
@@ -37,16 +85,76 @@
 
 .exp_text {
     flex: 1;
-    /* Takes remaining space */
+    min-width: 250px; /* Reduced minimum width */
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Start from top instead of center */
+    overflow-y: auto;
+    max-height: 100%;
+    word-wrap: break-word; /* Force long words to break */
+    overflow-wrap: break-word; /* Modern alternative */
+    hyphens: auto; /* Add hyphens for better wrapping */
 }
 
 .exp_text h2 {
     font-family: monospace;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
     padding-bottom: 20px;
+    word-wrap: break-word; /* Allow title to wrap if needed */
+    line-height: 1.2; /* Better line spacing for wrapped text */
+}
+
+/* Make sure all text content wraps properly */
+.exp_text p,
+.exp_text div,
+.exp_text span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* Override any nowrap settings */
+    line-height: 1.4;
+}
+
+/* Additional CSS for your existing typewriter container */
+.exp_back {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    position: relative;
+    z-index: 10; /* Ensures typewriter stays above other content */
+}
+
+/* Typewriter styles */
+.type_writer_container{ 
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.type_writer_text.hidden{
+    font-size: 4em;
+    letter-spacing: 15px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    color: black;
+}
+
+.type_writer_text.show{
+    animation: 
+        typing .8s steps(13),
+        cursor .4s step-end infinite alternate;
+    opacity: 1;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+
+@keyframes typing{
+    from {width: 0}
 }
