@@ -3,17 +3,18 @@
   margin-top: 75px;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 25vh;
+  
 }
 
 /* typewritier */
 .type_writer_container{ 
   display: inline-block;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 .type_writer_text.hidden{
-  font-size: 5em;
+  font-size: 4em;
   letter-spacing: 15px;
   font-family: monospace;
   border-right: 5px solid;

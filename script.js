@@ -30,3 +30,34 @@ const observer = new IntersectionObserver((entries) => {
 });
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+// rotating picture
+const imagePaths = [
+  "experience_photos/toldaly_img_1.png",
+  "experience_photos/toldaly_img_2.png",
+  "experience_photos/toldaly_img_3.png"
+];
+
+
+let current = 0;
+let showingImg1 = true;
+
+const img1 = document.getElementById("img1");
+const img2 = document.getElementById("img2");
+
+setInterval(() => {
+  current = (current + 1) % imagePaths.length;
+
+  if (showingImg1) {
+    img2.src = imagePaths[current];
+    img2.classList.add("active");
+    img1.classList.remove("active");
+  } else {
+    img1.src = imagePaths[current];
+    img1.classList.add("active");
+    img2.classList.remove("active");
+  }
+
+  showingImg1 = !showingImg1;
+}, 4000); // every 3 seconds

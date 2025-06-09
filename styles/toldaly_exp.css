@@ -1,0 +1,52 @@
+/* Replace your current CSS with this: */
+.toldaly_exp {
+    display: flex;
+    align-items: stretch;
+    height: 80%;
+    /* Or whatever height you want */
+    /* No gap property = elements stick together */
+    max-width: 80%; /* Limits entire container to 60% of screen */
+    margin: 0 auto;
+}
+
+.exp_img_wrapper {
+    position: relative;
+    width: 350px;
+    /* Fixed width - adjust as needed */
+    /* OR use: flex: 0 0 40%; for percentage */
+    overflow: hidden;
+}
+
+.exp_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Shows full image */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+.exp_img.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.exp_text {
+    flex: 1;
+    /* Takes remaining space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exp_text h2 {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
