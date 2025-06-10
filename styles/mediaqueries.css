@@ -1,0 +1,56 @@
+/* Mobile Profile Section */
+@media screen and (max-width: 768px) {
+    #profile {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+    
+    .section__pic-container {
+        order: 1;
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .section__pic-container img {
+        width: 280px;
+        height: 350px;
+        object-fit: cover;
+    }
+    
+    .section__text {
+        order: 2;
+        width: 100%;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .alt_card {
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section__pic-container img {
+        width: 240px;
+        height: 300px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .section_dark_text {
+        font-size: 0.9rem;
+    }
+    
+    .alt_card {
+        margin: 0 0.5rem;
+    }
+}

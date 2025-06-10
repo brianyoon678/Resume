@@ -1,13 +1,14 @@
 
 /* Profile Section */
 
-#profile{
+/* Update your existing #profile rule */
+#profile {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center; /* Add this */
     gap: 1rem;
     height: 80vh;
-
 }
 .profile-video{
     
